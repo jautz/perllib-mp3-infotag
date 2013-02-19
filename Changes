@@ -1,0 +1,38 @@
+# Revision history for Perl extension MP3::InfoTag.
+
+0.40    2012-04-09
+
+- tag2string(), string2tag(): normalize all placeholders in input patterns
+  to upper case so that the placeholders are now case-insensitive
+- minor refactoring in tag2string() concering max field length warning
+
+0.31    2009-12-30
+
+- changed packaging only, no changes of the module itself
+
+0.30    2006-09-29
+
+- new optional parameter `weed' for string2tag(): all matches of this regular
+  expression will be replaced by spaces
+- removed implicit replacement of underscores with spaces in string2tag();
+  use the new weed parameter to do this explicitly
+
+0.20    2005-05-13
+
+- refactoring from OO module to `classic' module because this turned out to be
+  a mere collections of functions
+
+0.11    2004-11-14
+
+- bug fix in string2tag(): seperator at end of pattern now possible
+
+0.10    2004-10-17
+
+- several undocumented early bug fixes since 0.01
+- TAG_FIELDS_ORDERED holding sensible field order
+- new: getTagFieldNames()
+- changed order of fields in printTag() result string
+
+0.01    2004-01-22
+
+- initial version

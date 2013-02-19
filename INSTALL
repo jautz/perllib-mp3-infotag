@@ -1,0 +1,43 @@
+INSTALLATION
+============
+
+STANDARD LOCATIONS
+------------------
+
+To install this module in standard locations type the following:
+
+  perl Makefile.PL
+  make
+  make test
+  make install
+
+On Unix systems you will typically need root privileges for the last step
+that installs the module for all users on your machine.
+
+
+USER DEFINED LOCATIONS
+----------------------
+
+If you want to install it to a location in your home directory you can alter
+the first command in the following way (where 'uid' is your username):
+
+  perl Makefile.PL LIB=/home/uid/lib/perl PREFIX=/home/uid/lib/perl
+
+LIB is where the module files will go and PREFIX is the stub directory for
+everything else.
+
+Of course you have to tell perl that this user-specific directory should be
+included into the module search path. Therefore you must set an environment
+variable. Using bash as shell you would type:
+
+  EXPORT PERLLIB=/home/uid/lib/perl
+
+
+DE-INSTALLATION
+===============
+
+To uninstall this module return to the directory where you installed it from
+and type:
+
+  make uninstall
+
