@@ -19,9 +19,9 @@ USER DEFINED LOCATIONS
 ----------------------
 
 If you want to install it to a location in your home directory you can alter
-the first command in the following way (where 'uid' is your username):
+the first command in the following way:
 
-  perl Makefile.PL LIB=/home/uid/lib/perl PREFIX=/home/uid/lib/perl
+  perl Makefile.PL LIB=/home/$USER/lib/perl PREFIX=/home/$USER/lib/perl
 
 LIB is where the module files will go and PREFIX is the stub directory for
 everything else.
@@ -30,7 +30,7 @@ Of course you have to tell perl that this user-specific directory should be
 included into the module search path. Therefore you must set an environment
 variable. Using bash as shell you would type:
 
-  EXPORT PERLLIB=/home/uid/lib/perl
+  export PERLLIB=/home/$USER/lib/perl
 
 
 DE-INSTALLATION
